@@ -5,7 +5,7 @@ import numpy as np
 app = Flask(__name__)
 model = joblib.load("risk_model.pkl")
 
-@app.route("", methods=["GET"])
+@app.route("/", methods=["GET"])
 def show():
     return jsonify({
         "message":"working"
